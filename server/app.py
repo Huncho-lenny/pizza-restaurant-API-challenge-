@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import os
 from .models import Restaurant, Pizza, RestaurantPizza
+import os
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -20,5 +20,5 @@ def create_app():
         return 'Pizza API Running'
     
     from .models import Restaurant, Pizza, RestaurantPizza
-    
+
     return app
