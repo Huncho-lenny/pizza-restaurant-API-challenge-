@@ -19,6 +19,4 @@ def create_app():
     def index():
         return 'Pizza API Running'
     
-    from .models import Restaurant, Pizza, RestaurantPizza
-
     return app

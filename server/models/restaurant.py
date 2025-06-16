@@ -1,4 +1,8 @@
-from server.app import db 
+try:
+    from server.app import db
+except ImportError:
+    from flask_sqlalchemy import SQLAlchemy
+    db = SQLAlchemy()
 
 class Restaurant(db.Model):
     __tablename__ = 'restaurants'
