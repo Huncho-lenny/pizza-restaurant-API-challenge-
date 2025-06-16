@@ -1,4 +1,4 @@
-from server.app import db 
+from server.extensions import db
 
 class Pizza(db.Model):
     __tablename__ = 'pizza'
@@ -10,5 +10,3 @@ class Pizza(db.Model):
 
     def __repr__(self):
         return f"<Pizza {self.name}>"
-    
-                     
